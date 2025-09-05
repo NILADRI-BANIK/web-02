@@ -1,0 +1,512 @@
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Dancing+Script:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-selling-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.top-selling-container {
+  font-family: 'Playfair Display', Georgia, serif;
+  background: linear-gradient(135deg, #f4e4d6 0%, #e8d5c4 30%, #dcc4a8 70%, #d4af8c 100%);
+  min-height: 100vh;
+  padding: 60px 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Title Section */
+.title-section {
+  margin-bottom: 80px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.title-section h1 {
+  font-size: 3.2rem;
+  color: #2a2a2a;
+  font-weight: 400;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.5px;
+}
+
+.title-section h2 {
+  font-size: 2.8rem;
+  color: #2a2a2a;
+  font-weight: 400;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.5px;
+}
+
+.script-text {
+  font-family: 'Dancing Script', cursive;
+  font-style: italic;
+  color: #8b6b47;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.title-section h3 {
+  font-size: 2.8rem;
+  color: #2a2a2a;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.5px;
+}
+
+/* Perfumes Grid */
+.perfumes-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin: 80px 0;
+  flex-wrap: wrap;
+}
+
+.perfume-item {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.perfume-item:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.perfume-image-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.perfume-circle {
+    width: 280px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, 
+        rgba(255, 255, 255, 0.4) 0%, 
+        rgba(255, 255, 255, 0.25) 40%, 
+        rgba(255, 255, 255, 0.1) 70%, 
+        transparent 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.perfume-circle .perfume-bottle {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    /* Remove border-radius if you want to fill ellipse, but for ellipse shape: */
+    /* border-radius: 50% / 45%; */
+}
+
+.perfume-item:hover .perfume-circle {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  background: radial-gradient(ellipse at center, 
+    rgba(255, 255, 255, 0.5) 0%, 
+    rgba(255, 255, 255, 0.3) 40%, 
+    rgba(255, 255, 255, 0.15) 70%, 
+    transparent 100%);
+}
+
+.perfume-bottle {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  filter: brightness(1.1) contrast(1.05) saturate(1.1);
+  transition: all 0.4s ease;
+}
+
+.perfume-item:hover .perfume-bottle {
+  filter: brightness(1.15) contrast(1.1) saturate(1.15);
+  transform: scale(1.02);
+}
+
+.perfume-item h4 {
+  font-size: 1.6rem;
+  color: #2a2a2a;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.perfume-item:hover h4 {
+  color: #8b6b47;
+  transform: translateY(-2px);
+}
+
+/* Description Section */
+.description {
+  max-width: 650px;
+  margin: 80px auto 60px;
+  animation: fadeInUp 0.8s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+.description p {
+  font-size: 1.1rem;
+  color: #2a2a2a;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-family: 'Playfair Display', serif;
+}
+
+.description p:first-child {
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+
+/* Unique Text */
+.unique-text {
+  position: absolute;
+  right: 80px;
+  bottom: 120px;
+  text-align: right;
+  animation: fadeInUp 0.8s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+.unique-script {
+  display: block;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: #8b6b47;
+  font-style: italic;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.unique-from {
+  display: block;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #8b6b47;
+  font-style: italic;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+/* Modal Styles */
+.perfume-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: modalFadeIn 0.4s ease-out;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #f8f5f0 0%, #ede8dd 100%);
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 550px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid rgba(139, 107, 71, 0.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #8b6b47;
+  transition: all 0.3s ease;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: #2a2a2a;
+  transform: rotate(90deg);
+}
+
+.modal-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 25px;
+  border: 3px solid rgba(139, 107, 71, 0.2);
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-content h2 {
+  font-size: 2.2rem;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.perfume-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
+}
+
+.perfume-notes {
+  margin: 25px 0;
+  text-align: center;
+}
+
+.perfume-notes h4 {
+  font-size: 1.3rem;
+  color: #2a2a2a;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+.notes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.note-tag {
+  background: linear-gradient(45deg, rgba(139, 107, 71, 0.15), rgba(139, 107, 71, 0.1));
+  padding: 8px 16px;
+  border-radius: 25px;
+  color: #555;
+  font-size: 0.95rem;
+  border: 1px solid rgba(139, 107, 71, 0.2);
+  font-family: 'Playfair Display', serif;
+  transition: all 0.3s ease;
+}
+
+.note-tag:hover {
+  background: linear-gradient(45deg, rgba(139, 107, 71, 0.25), rgba(139, 107, 71, 0.15));
+  transform: translateY(-1px);
+}
+
+.perfume-price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #8b6b47;
+  margin: 25px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(45deg, #8b6b47, #a17c5a);
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.add-to-cart-btn:hover {
+  background: linear-gradient(45deg, #a17c5a, #b8885f);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(139, 107, 71, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: scale(0.8) translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .perfumes-grid {
+    gap: 60px;
+  }
+  
+  .unique-text {
+    right: 40px;
+    bottom: 80px;
+  }
+  
+  .perfume-circle {
+    width: 250px;
+    height: 320px;
+  }
+  
+  .perfume-bottle {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-selling-container {
+    padding: 40px 15px;
+  }
+  
+  .perfumes-grid {
+    gap: 40px;
+    flex-direction: column;
+  }
+  
+  .title-section h1,
+  .title-section h2,
+  .title-section h3 {
+    font-size: 2.2rem;
+  }
+  
+  .script-text {
+    font-size: 2.4rem;
+  }
+  
+  .unique-text {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .modal-content {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .perfume-circle {
+    width: 220px;
+    height: 280px;
+  }
+  
+  .perfume-bottle {
+    width: 160px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-selling-container {
+    padding: 30px 10px;
+  }
+  
+  .title-section h1,
+  .title-section h2,
+  .title-section h3 {
+    font-size: 1.8rem;
+  }
+  
+  .script-text {
+    font-size: 2rem;
+  }
+  
+  .perfume-circle {
+    width: 200px;
+    height: 250px;
+  }
+  
+  .perfume-bottle {
+    width: 140px;
+    height: 180px;
+  }
+  
+  .description {
+    padding: 0 10px;
+  }
+  
+  .description p {
+    font-size: 1rem;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 25px 15px;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .notes-grid {
+    gap: 6px;
+  }
+  
+  .note-tag {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
